@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+    
+        <ion-col>
+  
+          <ion-title [routerLink]="['home']">Header</ion-title>
+    
+        </ion-col>
+    
+        <!-- Navigators Icons -->
+        <ion-col>
+    
+          <ion-segment color="tertiary">
+    
+            <ion-segment-button >
+              <ion-label color="tertiary">HM</ion-label>
+              <ion-icon color="tertiary" name="cafe"></ion-icon>
+            </ion-segment-button>
+    
+            <ion-segment-button>
+              <ion-label color="tertiary">F B</ion-label>
+              <ion-icon color="tertiary" name="cafe"></ion-icon>
+            </ion-segment-button>
+    
+          </ion-segment>
+    
+        </ion-col>
+    
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <app-courses-options-slider-cards></app-courses-options-slider-cards>
+  <app-form></app-form>
+</ion-content>
