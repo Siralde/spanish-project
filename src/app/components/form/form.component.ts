@@ -14,7 +14,8 @@ export class FormComponent {
     this.userData = this.formBuilder.group({
       name: [''],
       lastName: [''],
-      email: ['']
+      email: [''],
+      enquiry: ['']
     });
   }
 
