@@ -1,31 +1,25 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.scss'],
 })
-export class FormComponent implements OnInit {
+export class FormComponent {
 
-  checkoutForm;
+  private userData: FormGroup;
 
   constructor(private formBuilder: FormBuilder) {
-
-    this.checkoutForm = this.formBuilder.group({
-      name: '',
-      address: ''
+    this.userData = this.formBuilder.group({
+      name: [''],
+      lastName: [''],
+      email: ['']
     });
-
   }
 
-  onSubmit(customerData) {
-    // Process checkout data here
-    console.warn('Your order has been submitted', customerData);
-
-    this.checkoutForm.reset();
+  logForm() {
+    console.log(this.userData.value);
   }
-
-  ngOnInit() {}
 
 }

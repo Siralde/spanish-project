@@ -1,19 +1,20 @@
-<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
-
-    
-
+<form [formGroup]="userData" (ngSubmit)="logForm()">
+  
   <ion-item>
     <ion-label>Name</ion-label>
     <ion-input type="text" formControlName="name"></ion-input>
   </ion-item>
-
-    
-
+  
   <ion-item>
-    <ion-label>Adress</ion-label>
-    <ion-input type="text" formControlName="address"></ion-input>
+    <ion-label>lastName</ion-label>
+    <ion-input type="text" formControlName="lastName"></ion-input>
   </ion-item>
 
-    <button class="button" type="submit">Purchase</button>
+  <ion-item>
+    <ion-label>Email</ion-label>
+    <ion-input type="email" formControlName="email" inputmode="email"></ion-input>
+  </ion-item>
+  
+  <ion-button type="submit" [disabled]="!userData.valid">Submit</ion-button>
 
 </form>
