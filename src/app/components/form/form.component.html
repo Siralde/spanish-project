@@ -1,11 +1,11 @@
 <ion-card>
-  <ion-card-header>
+  <ion-card-header color=light>
     <ion-card-title>
       Form
     </ion-card-title>
   </ion-card-header>
   <ion-card-content>
-    <form [formGroup]="userData" (ngSubmit)="logForm()">
+    <form [formGroup]="userData" (ngSubmit)="presentAlert()">
       
       <ion-item>
         <ion-label position="floating">Name</ion-label>
@@ -27,7 +27,11 @@
           <ion-textarea type="email" formControlName="enquiry" ></ion-textarea>
         </ion-item>
       
-      <ion-button type="submit" [disabled]="!userData.valid">Submit</ion-button>
+      <ion-button type="submit" [disabled]="!userData.valid">
+        <div style="padding-top: 9px">
+        <strong> Submit </strong>
+        </div>
+      </ion-button>
 
     </form>
   </ion-card-content>

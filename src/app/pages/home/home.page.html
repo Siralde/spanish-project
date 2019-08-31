@@ -3,25 +3,27 @@
     <ion-grid>
       <ion-row>
     
-        <ion-col>
+        <ion-col size-sm="12" size-lg="6" offset="1">
   
-          <ion-title [routerLink]="['home']">Spanish Project</ion-title>
+          <ion-title class="app-logo" [routerLink]="['home']">
+            Spanish Project
+          </ion-title>
     
         </ion-col>
     
         <!-- Navigators Icons -->
-        <ion-col>
+        <ion-col size-sm="12" size-lg="4">
     
           <ion-segment color="tertiary">
     
-            <ion-segment-button >
-              <ion-label color="tertiary">General</ion-label>
-              <ion-icon color="tertiary" name="cafe"></ion-icon>
+            <ion-segment-button checked="true" (click)="scrollTo(null, 0)">
+              <ion-label class="segment-label" color="tertiary">General</ion-label>
+              <ion-icon class="segment-icon" color="tertiary" name="cafe"></ion-icon>
             </ion-segment-button>
     
-            <ion-segment-button>
-              <ion-label color="tertiary">For Bussines</ion-label>
-              <ion-icon color="tertiary" name="cafe"></ion-icon>
+            <ion-segment-button (click)="scrollTo(null, 1815)">
+              <ion-label class="segment-label" color="tertiary">For Bussines</ion-label>
+              <ion-icon class="segment-icon" color="tertiary" name="cafe"></ion-icon>
             </ion-segment-button>
     
           </ion-segment>
@@ -33,65 +35,149 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [scrollEvents]="true">
 
   <ion-grid>
-    <ion-row>
-      <ion-col>
-        <ion-text>
-            <h1> SPANISH </h1>
-            <p>
-            The mother tongue of 400 million people, an official language on four continents and the third most commonly spoken language in the world, Spanish boasts huge global importance.
-            Learning to speak it properly can open doors to business opportunities around the globe.
-            <p>
-        </ion-text>
-      </ion-col>
-    </ion-row>
 
-    <ion-row>
-      <ion-col>
-        <ion-text>
-          <h1> SPANISH PROJECT </h1>
-          <p>
-            20 years experiences of Spanish training for business, life & exams
-            Personalised Spanish courses taught by qualified experienced, professional tutors
-            Intensive teaching: full days of Spanish language & culture
-            Modern learning technologies in every classroom
-            Real life learning - explore London's hidden treasures in Spanish!
-          </p>
-        </ion-text>
-      </ion-col>
-    </ion-row>
+    <div class="first">
+      <ion-row justify-content-center>
+        <ion-col>
+          <ion-title>
+              <h1 class="ion-text-center title"> SPANISH </h1>
+          </ion-title>
+        </ion-col>
+      </ion-row>
+      
+      <ion-row>
+        <ion-col size-md="8" offset="2">
+          <ion-text>
+              <p class="ion-text-justify">
+              The mother tongue of 400 million people, an official language on four continents and the third most commonly spoken language in the world, Spanish boasts huge global importance.
+              Learning to speak it properly can open doors to business opportunities around the globe.
+              <p>
+          </ion-text>
+        </ion-col>
+      </ion-row>
+    </div>
 
+
+    <div class="second">
+      <ion-row>
+        <ion-col>
+          <ion-title>
+              <h1 class="title"> SPANISH PROJECT </h1>
+          </ion-title>
+        </ion-col>
+      </ion-row>
+
+
+      <ion-row>
+        <ion-col size-md="8" offset="2">
+          <ion-text>
+            <p class="ion-text-justify">
+              20 years experiences of Spanish training for business, life & exams
+              Personalised Spanish courses taught by qualified experienced, professional tutors
+              Intensive teaching: full days of Spanish language & culture
+              Modern learning technologies in every classroom
+              Real life learning - explore London's hidden treasures in Spanish!
+            </p>
+          </ion-text>
+        </ion-col>
+      </ion-row>
+    </div>
+
+    <div class="third">
+      <ion-row justify-content-center>
+          <ion-col>
+            <ion-title>
+                <h1 class="title">FOR BUSINESS</h1>
+            </ion-title>
+          </ion-col>
+        </ion-row>
+
+      <ion-row>
+        <ion-col size-md="8" offset="2">
+          <ion-text>
+            <p class="ion-text-justify">
+            THE SPANISH PROJECT will create a personalised Spanish course to suit your needs. Our Spanish for business courses are aligned to the Common European Framework Reference and designed for students of all levels from beginner to advanced.
+            
+            We create a bespoke course, focus on the Spanish vocabulary you need in your career. Our clients are busy professionals, so we have perfected a fully immersive tuition method: you will be speaking Spanish – and only Spanish – throughout the course. It can be a challenge at first, but you will quickly find yourself speaking and thinking in Spanish. For executives and business people, it is the most efficient and empowering way to become competent and confident in business Spanish.
+            </p>
+          </ion-text>
+        </ion-col>
+      </ion-row>
+    </div>
+
+    <div class="four">
+    <ion-row justify-content-center>
+        <ion-col>
+          <ion-title>
+              <h1 class="title"> SPANISH COURSE OPTIONS </h1>
+          </ion-title>
+        </ion-col>
+      </ion-row>
+
+    <!-- slider for phones -->
+    <!-- <ion-row>
+      <app-courses-options-slider-cards></app-courses-options-slider-cards>
+    </ion-row> -->
+    
+    <!-- two colums for desktops -->
     <ion-row>
-      <ion-col>
-        <ion-text>
-          <h1>FOR BUSINESS</h1>
-          <p>
-          THE SPANISH PROJECT will create a personalised Spanish course to suit your needs. Our Spanish for business courses are aligned to the Common European Framework Reference and designed for students of all levels from beginner to advanced.
+      <ion-col size-md="4" offset="2">
+        <ion-card>
+            <ion-card-header color=light>
+              <ion-card-title>Face-to-face</ion-card-title>
+              <ion-card-subtitle>From £35</ion-card-subtitle>
+            </ion-card-header>
+            
           
-          We create a bespoke course, focus on the Spanish vocabulary you need in your career. Our clients are busy professionals, so we have perfected a fully immersive tuition method: you will be speaking Spanish – and only Spanish – throughout the course. It can be a challenge at first, but you will quickly find yourself speaking and thinking in Spanish. For executives and business people, it is the most efficient and empowering way to become competent and confident in business Spanish.
-          </p>
-        </ion-text>
+            <ion-card-content>
+              
+              <ion-img padding src="assets/img/classes.jpg"></ion-img>
+        
+                <p> Weekly or intensive courses, privates, two to one, three to one or groups.</p>
+                <p>Course content: General, business, technical or industry-specific Spanish.</p>
+                <p>Location: Classes take place in your office, home or wherever you prefer.</p>
+                <p>  Timetable: You choose when and how often you want your classes to take place.</p>
+              
+              
+
+            </ion-card-content>
+      
+          </ion-card>
+      </ion-col>
+
+      <ion-col size-md="4">
+          <ion-card>
+              <ion-card-header color=light>
+                <ion-card-title>Online lesson</ion-card-title>
+                <ion-card-subtitle>From £25</ion-card-subtitle>
+              </ion-card-header>
+        
+              <ion-card-content>
+
+                  <ion-img padding src="assets/img/online-course.jpg"></ion-img>
+
+                <p>Available anywhere you or your staff are in the world.</p>
+                <p>Course content: General, business, technical or industry-specific Spanish.</p>
+                <p>Location: Classes take place in your office, home or wherever you prefer.</p>
+                <p>Timetable: You choose when and how often you want your classes to take place.</p>
+              </ion-card-content>
+            </ion-card>
       </ion-col>
     </ion-row>
 
-    <ion-row>
-      <ion-col>
-        <ion-text>
-          <h1> SPANISH COURSE OPTIONS </h1>
-          Language training price and format:
-        </ion-text>
+   </div>
 
-        <app-courses-options-slider-cards></app-courses-options-slider-cards>
-      </ion-col>
-    </ion-row>
 
-    <ion-row>
-      <ion-col>
-        <app-form></app-form>
-      </ion-col>
-    </ion-row>
-  
+   <div class="five">
+      <ion-row>
+        <ion-col size-md="8" offset="2">
+          <app-form></app-form>
+        </ion-col>
+      </ion-row>
+    </div>
+
   </ion-grid>
 </ion-content>

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { IonContent, AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,34 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  @ViewChild(IonContent) content: IonContent;
+  
+  constructor(private alertController: AlertController) {}
+
+  dummyFunction() {
+    console.log('Hey');
+  }
+
+  scrollTo( xAxis, yAxis)
+  {
+    this.content.scrollToPoint(xAxis, yAxis, 500)
+  }
+
+  async presentAlert() {
+    const alert = await this.alertController.create({
+      header: 'Alert',
+      message: 'Message',
+      buttons: [{
+        text: 'Send',
+        handler: this.alertController.dismiss
+      },
+      {
+        text: 'cancel',
+        role: 'cancel',
+        handler: this.alertController.dismiss
+      },
+    ]
+    });
+  }
 
 }
