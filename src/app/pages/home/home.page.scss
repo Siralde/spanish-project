@@ -1,5 +1,5 @@
 ion-col {
-    border: 1px solid black
+    //border: 1px solid black
 }
 
 ion-card {
@@ -15,35 +15,36 @@ ion-card {
 }
 
 .app-logo {
+    padding-top: 10px;
     font-size: 55px
 }
 
 .title {
-    font-size: 35px;
+    font-size: 65px;
     text-align: center;
+    font-weight: bold;
+    color: var(--ion-color-primary)
 }
 
 .first {
-    background-color: deeppink;
     height: 903px;
 }
 
 .second {
-    background-color: dodgerblue;
     height: 903px;
 }
 
 .third {
-    background-color: rgb(186, 255, 117);
     height: 903px;
 }
 
 .four {
-    background-color: palegoldenrod;
     height: 903px;
 }
 
 .five {
-    background-color: lightgray;
-    height: 903px;
+}
+
+.principal-text {
+    font-size: large;
 }

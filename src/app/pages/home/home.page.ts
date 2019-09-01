@@ -8,7 +8,7 @@ import { IonContent, AlertController } from '@ionic/angular';
 })
 export class HomePage {
 
-  @ViewChild(IonContent) content: IonContent;
+  @ViewChild(IonContent, {static: false}) content: IonContent;
   
   constructor(private alertController: AlertController) {}
 
@@ -16,8 +16,7 @@ export class HomePage {
     console.log('Hey');
   }
 
-  scrollTo( xAxis, yAxis)
-  {
+  scrollTo( xAxis, yAxis) {
     this.content.scrollToPoint(xAxis, yAxis, 500)
   }
 

@@ -1,5 +1,5 @@
 <ion-card>
-  <ion-card-header color=light>
+  <ion-card-header color=primary>
     <ion-card-title>
       Form
     </ion-card-title>
@@ -27,10 +27,8 @@
           <ion-textarea type="email" formControlName="enquiry" ></ion-textarea>
         </ion-item>
       
-      <ion-button type="submit" [disabled]="!userData.valid">
-        <div style="padding-top: 9px">
+      <ion-button type="submit" [disabled]="!userData.valid" class="button-summit">
         <strong> Submit </strong>
-        </div>
       </ion-button>
 
     </form>
