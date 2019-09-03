@@ -9,7 +9,7 @@ import { AlertController } from '@ionic/angular';
 })
 export class FormComponent {
 
-  private userData: FormGroup;
+  userData: FormGroup;
 
   constructor(private formBuilder: FormBuilder, private alertController: AlertController) {
     this.userData = this.formBuilder.group({

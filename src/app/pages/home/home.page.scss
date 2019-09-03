@@ -1,5 +1,5 @@
 ion-col {
-    //border: 1px solid black
+    border: 1px solid red
 }
 
 ion-card {
@@ -16,7 +16,8 @@ ion-card {
 
 .app-logo {
     padding-top: 10px;
-    font-size: 55px
+    font-weight: bold;
+    font-size: 75px;
 }
 
 .title {
@@ -28,6 +29,7 @@ ion-card {
 
 .first {
     height: 903px;
+    background-image: url("../../../assets/img/background1.jpg")
 }
 
 .second {
@@ -47,4 +49,8 @@ ion-card {
 
 .principal-text {
     font-size: large;
+}
+
+.texting {
+    font-size: 45px;
 }

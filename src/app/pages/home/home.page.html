@@ -3,10 +3,19 @@
     <ion-grid>
       <ion-row>
     
-        <ion-col size-sm="12" size-lg="6" offset="1">
+        <ion-col size-sm="12" size-lg="8" >
   
+
           <ion-title class="app-logo" [routerLink]="['home']">
-            Spanish Project
+            <div>
+                THE 
+            </div>
+            <div>
+              SPANISH          
+            </div>
+            <div>
+              PROJECT
+            </div>
           </ion-title>
     
         </ion-col>
@@ -18,12 +27,10 @@
     
             <ion-segment-button checked="true" (click)="scrollTo(null, 0)">
               <ion-label class="segment-label">General</ion-label>
-              <ion-icon class="segment-icon" name="cafe"></ion-icon>
             </ion-segment-button>
     
             <ion-segment-button (click)="scrollTo(null, 1815)">
               <ion-label class="segment-label">For Bussines</ion-label>
-              <ion-icon class="segment-icon" name="cafe"></ion-icon>
             </ion-segment-button>
     
           </ion-segment>
@@ -37,25 +44,15 @@
 
 <ion-content [scrollEvents]="true">
 
-  <ion-grid>
+  <ion-grid no-padding>
 
     <div class="first">
-      <ion-row justify-content-center>
-        <ion-col>
-          <ion-title>
-              <h1 class="ion-text-center title"> SPANISH </h1>
-          </ion-title>
-        </ion-col>
-      </ion-row>
       
       <ion-row>
-        <ion-col size-md="4" offset="4">
+        <ion-col size-md="6" offset="1">
           <ion-text>
-              <p class="ion-text-justify principal-text">
+              <p class="ion-text-justify principal-text texting" style="margin-top: 610px; font-weight: bold; color: white;">
               The mother tongue of 400 million people, an official language on four continents and the third most commonly spoken language in the world, Spanish boasts huge global importance.
-              </p>
-              <p class="ion-text-justify principal-text">
-              Learning to speak it properly can open doors to business opportunities around the globe.
               </p>
           </ion-text>
         </ion-col>
