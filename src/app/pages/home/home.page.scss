@@ -1,5 +1,5 @@
 ion-col {
-    border: 1px solid red
+    //border: 1px solid red
 }
 
 ion-card {
@@ -11,11 +11,12 @@ ion-card {
 }
 
 .segment-label{
-    margin-bottom: 0px;
+    
+    font-size: 25px;
 }
 
 .app-logo {
-    padding-top: 10px;
+    padding: 10px 10px;
     font-weight: bold;
     font-size: 75px;
 }
@@ -30,6 +31,14 @@ ion-card {
 .first {
     height: 903px;
     background-image: url("../../../assets/img/background1.jpg")
+}
+
+.first_text{
+    font-size: 45px;
+    // margin-top: 610px;
+    font-weight: bold; 
+    color: white; 
+    background-color: rgba(179, 179, 166, 0.911)
 }
 
 .second {
